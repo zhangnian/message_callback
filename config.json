@@ -1,0 +1,17 @@
+{
+  "global":{
+    "amqp": "amqp://root:root@116.196.102.109:5672/",
+    "retry":3,
+    "retry_ttl":10
+  },
+  "queues":[
+    {
+      "name":"order",
+      "callback_url":"http://localhost:5000/order_callback"
+    },
+    {
+      "name":"register",
+      "callback_url":"http://localhost:5000/register_callback"
+    }
+  ]
+}
